@@ -7,7 +7,7 @@ const WrongLetters = ({ wrongLetters }) => {
             {wrongLetters.map((letter, i) => (
                 <React.Fragment key={i}>
                     <span span > {letter}</span>
-                    {i < wrongLetters.length - 1 && ','}
+                    {i < wrongLetters.length - 1 && ' , '}
                 </React.Fragment>
             ))}
         </div >
