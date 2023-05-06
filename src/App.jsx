@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css';
 import { WrongLetters, Header, Word, Popup, Figure, Notification } from './components/index';
 import { notification } from './helper';
-
-const words = ['hello', 'geeksforgeeks', 'sunny', 'welcome', 'world', 'tablet', 'laptop'];
+import { words } from './util/words';
 
 const App = () => {
   const [isPlayable, setIsPlayable] = useState(true);
@@ -42,9 +41,9 @@ const App = () => {
   }, [correctLetters, wrongLetters, isPlayable])
 
   useEffect(() => {
-    console.log('correct letters : ' + correctLetters.length);
-    console.log(selectedWord.length);
-    console.log('wrong letters : ' + wrongLetters.length);
+    // console.log('correct letters : ' + correctLetters.length);
+    // console.log(selectedWord.length);
+    // console.log('wrong letters : ' + wrongLetters.length);
     if (correctLetters.length === uniqueLetters.size) {
       setFinalMsg('You won');
       setIsPlayable(false);
